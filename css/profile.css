@@ -1,0 +1,81 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+header {
+    background-color: #0c4b2b;
+    color: #eee;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+main {
+    flex: 10;
+}
+
+.box {
+    display: flex;
+}
+
+section {
+    padding: 2em;
+}
+
+canvas {
+    height: 150px;
+    width: 200px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}
+
+.image {
+    flex-basis: 50px;
+    text-align: left;
+}
+
+.info1 {
+    flex-basis: auto;
+}
+
+.info2 {
+    flex-basis: auto;
+}
+
+.info3 {
+    flex-basis: auto;
+}
+
+input {
+    border: none;
+    background: transparent;
+    font-size: 10pt;
+}
+
+footer {
+    background-color: #0c4b2b;
+    color: #eee;
+    font-size: small;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+footer p {
+    margin: 0;
+    line-height: 1.25;
+}
+
+p:last-child {
+    padding-top: 5px;
+}
