@@ -1,0 +1,46 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+header {
+    background-color: #0c4b2b;
+    color: #eee;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+main {
+    flex: 10;
+}
+
+table{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    
+}
+
+th[scope='col'] {
+    height: 2.5rem;
+    text-align: left; 
+    background-color: #0c4b2b;
+    color: #f2f5f3;
+
+}
+td,
+th{
+    padding: 1em;
+    border-bottom: 1px solid #d3d3d3;
+}
+td:hover{
+    background-color: rgb(171, 224, 24);
+}
