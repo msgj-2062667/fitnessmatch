@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="author" content="Melanie Ma, Haeun Lee, Jung Hwan Lee, Michael Song, Parker Beck">
@@ -9,23 +9,18 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/trainerMatchesAndScheduling.css">
     <title>Trainer Matches</title>
 </head>
 
-<body>
+<body class="trainer-matches-bg">
 
-<header class="text-center">
-  <nav class="navbar navbar-light bg-light">
+  <header>
+          <a href="qResults.html"><img src="../img/logo.jpg" alt="Logo"></a>
+          <h1 class="header-center">Trainer Matches</h1>
+  </header>
 
-   <button>Back to Quiz</button>
-
-  <h1 class="mr-3"> Trainer Matches </h1>
-  <a class="ml-3" href=""><img style="max-width: 25%" class="img-fluid" src="../img/logo.jpg" alt="Logo"></a>
-
-
-  </nav>
-</header>
+  <button class="back-to-quiz-btn" onclick="window.open('quiz-pages/qResults.html', '_self');">Back to quiz</button>
 
 <div class="container pt-7">
 <div class="row justify-content-center">
@@ -33,8 +28,9 @@
 <div class="col-md-6 col-xl-4 d-flex">
 <div class="card mb-5 d-flex shadow">
   <div class="card-body">
-
-      <img class="card-img-top img-fluid mb-2 rounded" src="../img/trainer6.jpg" alt="Trainer Justin Lowe">
+<div class="trainer-pic-container">
+      <img class="card-img-top img-fluid mb-2 rounded trainer-pic" src="../img/trainer6.jpg" alt="Trainer Justin Lowe">
+    </div>
   <h5 class="card-header">Justin Lowe</h5>
     <p class="card-text">
       <ul class="list-group list-group-flush">
@@ -42,7 +38,7 @@
       </ul>
     </p>
 
-    <a href="#" class="btn btn-primary">View Profile</a>
+    <a href="trainerprofile.html" class="btn btn-primary" role="button">View Profile</a>
 
 </div>
 </div>
@@ -53,7 +49,9 @@
 <div class="card mb-5 d-flex shadow">
   <div class="card-body">
   <!--<div class="row">-->
-  <img class="card-img-top img-fluid mb-2 rounded" src="../img/trainer7.jpg" alt="Trainer Macy Trahan">
+  <div class="trainer-pic-container">
+  <img class="card-img-top img-fluid mb-2 rounded trainer-pic" src="../img/trainer7.jpg" alt="Trainer Macy Trahan">
+</div>
   <h5 class="card-header">Macy Trahan</h5>
 
     <p class="card-text d-flex">
@@ -62,7 +60,7 @@
     </ul>
     </p>
 
-    <a href="#" class="btn btn-primary">View Profile</a>
+    <a href="trainerprofile.html" class="btn btn-primary" role="button">View Profile</a>
 
   </div>
 </div>
@@ -72,7 +70,9 @@
 <div class="card mb-5 d-flex shadow">
   <div class="card-body">
   <!--<div class="row">-->
-  <img class="card-img-top img-fluid mb-2 rounded" src="../img/trainer3.jpg" alt="Trainer Samantha Maine">
+  <div class="trainer-pic-container">
+  <img class="card-img-top img-fluid mb-2 rounded trainer-pic" src="../img/trainer3.jpg" alt="Trainer Samantha Maine">
+</div>
   <h5 class="card-header">Samantha Maine</h5>
 
     <p class="card-text">
@@ -81,7 +81,7 @@
     </ul>
     </p>
 
-    <a href="#" class="btn btn-primary">View Profile</a>
+    <a href="trainerprofile.html" class="btn btn-primary" role="button">View Profile</a>
 
   </div>
 </div>
@@ -92,7 +92,9 @@
 <div class="card mb-5 d-flex shadow">
   <div class="card-body">
   <!--<div class="row">-->
-  <img class="card-img-top img-fluid mb-2 rounded" src="../img/trainer4.jpg" alt="Trainer Mason Torres">
+  <div class="trainer-pic-container">
+  <img class="card-img-top img-fluid mb-2 rounded trainer-pic" src="../img/trainer4.jpg" alt="Trainer Mason Torres">
+</div>
   <h5 class="card-header">Mason Torres</h5>
 
     <p class="card-text">
@@ -101,7 +103,7 @@
     </ul>
     </p>
 
-    <a href="#" class="btn btn-primary">View Profile</a>
+    <a href="trainerprofile.html" class="btn btn-primary" role="button">View Profile</a>
 
   </div>
 </div>
