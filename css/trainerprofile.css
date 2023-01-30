@@ -1,0 +1,78 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-around;
+}
+
+
+.buttons {
+  float: right;
+  padding: 20px;
+  margin-right: 100px;
+}
+
+
+.btn:link,
+.btn:visited {
+  	padding: 10px 20px;
+  	display: inline-block;
+  	border-radius: 100px;
+  	transition: all .2s;
+  	position: relative;
+}
+
+.btn:hover {
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+  background-color: #ade792;
+}
+
+.btn:active {
+  color: white;
+  background: #506b44;
+}
+
+.btn-green {
+  background-color: #ade792;
+  color: black;
+  font-size: 14px;
+}
+
+.btn-large {
+  background-color: #ade792;
+  color: black;
+  font-size: 40px;
+}
+
+header div {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.btn span {
+  display: flex;
+  font-size: 1em;
+  justify-content: left;
+}
+
+footer {
+  height: max-content;
+  background-color: black;
+}
+
+footer p{
+  padding-top: 30px;;
+  color: white;
+}
