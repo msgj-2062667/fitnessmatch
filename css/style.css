@@ -35,7 +35,7 @@ header {
     background-color: #454545;
 }
 
-.logo {
+img.logo {
     display: block;
     width: 200px;
     height: auto;
@@ -43,13 +43,13 @@ header {
     margin-left: 100px;
 }
 
-.buttons {
+div.buttons {
     float: right;
     padding: 20px;
     margin-right: 100px;
 }
 
-.button {
+div.button {
     float: right;
     padding: 20px;
     margin-right: 100px;
@@ -57,7 +57,7 @@ header {
     bottom: 70px;
 }
 
-.wrapper{
+div.wrapper{
     background-image: url(https://hips.hearstapps.com/hmg-prod/images/mh-trainer-2-1533576998.png?resize=1200:*);
     height: 100vh;
     -webkit-background-size: cover;
@@ -66,7 +66,7 @@ header {
     position: relative;
 }
 
-.btn:link, .btn:visited {
+a.btn:link, a.btn:visited {
     padding: 10px 20px;
     display: inline-block;
     border-radius: 100px;
@@ -74,42 +74,42 @@ header {
     position: relative;
 }
 
-.btn:hover {
+a.btn:hover {
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
     background-color: #ade792;
   }
 
-.btn:active {
+a.btn:active {
     color: white;
     background: #506b44;
 }
 
-.btn-green, .btn.btn-green {
+a.btn-green, .btn.btn-green {
     background-color: #ade792;
     color: black;
     font-size: 14px;
 }
 
-.btn-large {
+a.btn-large {
     background-color: #ade792;
     color: black;
     font-size: 40px;
 }
 
-.index {
+main.index {
     margin-top: 80px;
     text-align: center;
     height: 100vh;
     line-height: 100px;
 }
 
-.index p {
+main.index p {
     color: #ade792;
     font-size: 50px;
     text-shadow: 0 0 20px rgba(250, 250, 250, 0.685);
 }
 
-.box {
+div.box {
     display: flex;
 }
 
@@ -125,20 +125,20 @@ canvas {
     border-color: black;
 }
 
-.image {
+section.image {
     flex-basis: 50px;
     text-align: left;
 }
 
-.info1 {
+section.info1 {
     flex-basis: auto;
 }
 
-.info2 {
+section.info2 {
     flex-basis: auto;
 }
 
-.info3 {
+section.info3 {
     flex-basis: auto;
 }
 
@@ -173,7 +173,7 @@ td:hover {
     background-color: rgb(171, 224, 24);
 }
 
-.edit {
+div.edit {
     display: flex;
     justify-content: end;
     margin-right: 4rem;
@@ -181,14 +181,14 @@ td:hover {
     margin-bottom: 2rem;
 }
 
-.quiz-button {
+a.quiz-button {
     background-color: #ade792;
     padding: 0.5rem;
     margin: 1rem;
     text-decoration: none
 }
 
-.quiz-progress {
+progress.quiz-progress {
     width: 15rem;
     height: 1rem;
     margin: 0.5rem;
@@ -196,16 +196,16 @@ td:hover {
     background-color: #ececec;
 }
 
-.quiz-sub-question {
+h3.quiz-sub-question {
     font-size: 1.5rem;
     padding: 1rem;
 }
 
-.quiz-question {
+h2.quiz-question {
     padding: 0.5rem;
 }
 
-.container {
+div.container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -234,7 +234,7 @@ footer {
     left: 0;
 }
 
-.footerr {
+footer.footerr {
     color: white;
     width: 100%;
     height: max-content;
@@ -251,14 +251,14 @@ p a, li a {
     color: white;
 }
 
-footer ul li, .footerr ul li {
+footer ul li, footer.footerr ul li {
     display: inline-block;
     list-style: none;
     margin: 0.8px;
     line-height: 50px;
 }
 
-.trainer-scheduling-bg, .trainer-matches-bg {
+div.trainer-scheduling-bg, div.trainer-matches-bg {
     background-image: url("../img/background.jpg");
     -webkit-background-size: cover;
     background-size: cover;
@@ -266,7 +266,7 @@ footer ul li, .footerr ul li {
     position: relative;
 }
 
-.day-container {
+div.day-container {
     width: 10rem;
     border-color: #ADE792;
     border-width: thick;
@@ -287,13 +287,13 @@ div.trainer-pic-container {
     overflow: hidden;
 }
 
-.btn.timeslot-button {
+a.btn.timeslot-button {
     background-color: white;
     color: black;
     border-color: #0c4b2b;
     border-width: thin;
 }
-.btn.timeslot-button:active, .btn.timeslot-button:hover, .btn.timeslot-button:focus {
+a.btn.timeslot-button:active, a.btn.timeslot-button:hover, a.btn.timeslot-button:focus {
     background-color: #ADE792;
     color: black;
     border-color: #0c4b2b;
