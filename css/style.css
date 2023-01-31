@@ -310,4 +310,19 @@ a.btn.timeslot-button:active, a.btn.timeslot-button:hover, a.btn.timeslot-button
     body.trainer-scheduling-bg, body.trainer-matches-bg {
         background-image: none;
     }
+    .no-disp {
+        display: none;
+    }
+    .extra-padding {
+        padding-bottom: 0.5rem;
+    }
+    .schedule-padding {
+        padding-bottom: 3rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .button-bot {
+        display: none;
+    }
 }
