@@ -282,8 +282,8 @@ div.add-to-schedule {
 }
 
 div.trainer-pic-container {
-    height: 300px;
-    max-width: 300px;
+    height: 456px;
+    max-width: 456px;
     overflow: hidden;
 }
 
@@ -307,7 +307,7 @@ a.btn.timeslot-button:active, a.btn.timeslot-button:hover, a.btn.timeslot-button
     div.day-container {
         margin: auto;
     }
-    body.trainer-scheduling-bg, body.trainer-matches-bg {
+    div.trainer-scheduling-bg, div.trainer-matches-bg {
         background-image: none;
     }
     .no-disp {
