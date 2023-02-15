@@ -26,68 +26,84 @@
             <div id="body-content">
                 <form>
                     <div>
-                        <div class="d-flex justify-content-center">
+                        <!--progress bar-->
+                        <div class="d-flex justify-content-center" aria-label="progress bar of questions completed">
                             <progress id="file" value="85.71" max="100" class="quiz-progress"> 85.71% </progress> 
                             <label for="file">6 out of 7 completed</label>
                         </div>
                         
+                        <!--question-->
                         <div class="d-flex justify-content-center">
-                            <h2 for="workout-input" class="quiz-question">What type of workouts do you want to do?
+                            <h2 class="quiz-question">What type of workouts do you want to do?
                                 <small>(Check all that apply)</small>
                             </h2>
                         </div>
 
                         <br><br>
                         
+                        <!--answer choices-->
                         <div class="container">
                             <div class="row justify-content-center">
-                                <div class="col col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                                    <input type="checkbox">Cardio</input>
+                                <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                                    <input type="checkbox" id="cardio">
+                                    <label for="cardio">Cardio</label>
                                 </div>
-                                <div class="col col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                                    <input type="checkbox">Machines</input>
+                                <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                                    <input type="checkbox" id="machines">
+                                    <label for="machines">Machines</label>
                                 </div>
-                                <div class="col col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                                    <input type="checkbox">Swimming</input>
+                                <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                                    <input type="checkbox" id="swimming">
+                                    <label for="swimming">Swimming</label>
                                 </div>
-                                <div class="col col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                                    <input type="checkbox">Triathlon Training</input>
+                                <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                                    <input type="checkbox" id="triathlon">
+                                    <label for="triathlon">Triathlon Training</label>
                                 </div>
-                                <div class="col col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                                    <input type="checkbox">Lifting</input>
+                                <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                                    <input type="checkbox" id="lifting">
+                                    <label for="lifting">Lifting</label>
                                 </div>
-                                <div class="col col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                                    <input type="checkbox">Cycling</input>
+                                <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                                    <input type="checkbox" id="cycling">
+                                    <label for="cycling">Cycling</label>
                                 </div>
-                                <div class="col col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                                    <input type="checkbox">Kickboxing</input>
+                                <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                                    <input type="checkbox" id="kickboxing">
+                                    <label for="kickboxing">Kickboxing</label>
                                 </div>
-                                <div class="col col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                                    <input type="checkbox">Yoga</input>
+                                <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                                    <input type="checkbox" id="yoga">
+                                    <label for="yoga">Yoga</label>
                                 </div>
-                                <div class="col col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                                    <input type="checkbox">Zumba</input>
+                                <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                                    <input type="checkbox" id="zumba">
+                                    <label for="zumba">Zumba</label>
                                 </div>
-                                <div class="col col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                                    <input type="checkbox">Pilates</input>
+                                <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                                    <input type="checkbox" id="pilates">
+                                    <label for="pilates">Pilates</label>
                                 </div>
-                                <div class="col col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                                    <input type="checkbox">HIIT</input>
+                                <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                                    <input type="checkbox" id="hiit">
+                                    <label for="hiit">HIIT</label>
                                 </div>
-                                <div class="col col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                                    <input type="checkbox">CrossFit</input>
+                                <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                                    <input type="checkbox" id="crossFit">
+                                    <label for="crossFit">CrossFit</label>
                                 </div>
                             </div>
                         </div>
 
                         <br><br>
 
+                        <!--buttons to switch pages-->
                         <div class="d-flex flex-row justify-content-center">
                             <div>
-                                <a href="q6.html" class="btn quiz-button">Previous</a>
+                                <a href="q6.html" class="btn quiz-button" role="button">Previous</a>
                             </div>
                             <div>
-                                <a href="qResults.html" class="btn quiz-button">Submit</a>
+                                <a href="qResults.html" class="btn quiz-button" role="button">Submit</a>
                             </div>
                         </div>
                         

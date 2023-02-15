@@ -26,30 +26,36 @@
             <div id="body-content">
                 <form>
                     <div>
-                        <div class="d-flex justify-content-center">
+                        <!--progress bar-->
+                        <div class="d-flex justify-content-center" aria-label="progress bar of questions completed">
                             <progress id="file" value="57.14" max="100" class="quiz-progress"> 57.14% </progress> 
                             <label for="file">4 out of 7 completed</label>
                         </div>
                         
+                        <!--question-->
                         <div class="d-flex justify-content-center">
-                            <h2 for="trainer-input" class="quiz-question">What style of trainer do you prefer?
+                            <h2 class="quiz-question">What style of trainer do you prefer?
                                 <small>(Check all that apply)</small>
                             </h2>
                         </div>
 
                         <br><br>
                         
+                        <!--answer choices-->
                         <div class="container">
                             <div class="row justify-content-center">
 
-                                <div class="col col-sm-12 col-md-auto col-lg-auto col-xl-auto">
-                                    <input type="checkbox">Drill sergeant</input>
+                                <div class="col col-12 col-sm-12 col-md-auto col-lg-auto col-xl-auto">
+                                    <input type="checkbox" id="drill">
+                                    <label for="drill">Drill sergeant</label>
                                 </div>
-                                <div class="col col-sm-12 col-md-auto col-lg-auto col-xl-auto">
-                                    <input type="checkbox">Supportive, nurturing coach</input>
+                                <div class="col col-12 col-sm-12 col-md-auto col-lg-auto col-xl-auto">
+                                    <input type="checkbox" id="supportive">
+                                    <label for="supportive">Supportive, nurturing coach</label>
                                 </div>
-                                <div class="col col-sm-12 col-md-auto col-lg-auto col-xl-auto">
-                                    <input type="checkbox">Educator/teacher</input>
+                                <div class="col col-12 col-sm-12 col-md-auto col-lg-auto col-xl-auto">
+                                    <input type="checkbox" id="educator">
+                                    <label for="educator">Educator/teacher</label>
                                 </div>
 
                             </div>
@@ -57,12 +63,13 @@
 
                         <br><br>
 
+                        <!--buttons to switch pages-->
                         <div class="d-flex flex-row justify-content-center">
                             <div>
-                                <a href="q4.html" class="btn quiz-button">Previous</a>
+                                <a href="q4.html" class="btn quiz-button" role="button">Previous</a>
                             </div>
                             <div>
-                                <a href="q6.html" class="btn quiz-button">Next</a>
+                                <a href="q6.html" class="btn quiz-button" role="button">Next</a>
                             </div>
                         </div>
                         

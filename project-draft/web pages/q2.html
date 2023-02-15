@@ -26,31 +26,38 @@
             <div id="body-content">
                 <form>
                     <div>
-                        <div class="d-flex justify-content-center">
+                        <!--progress bar-->
+                        <div class="d-flex justify-content-center" aria-label="progress bar of questions completed">
                             <progress id="file" value="14.29" max="100" class="quiz-progress"> 14.29% </progress> 
                             <label for="file">1 out of 7 completed</label>
                         </div>
                         
+                        <!--question-->
                         <div class="d-flex justify-content-center">
                             <h2 class="quiz-question">How active are you now?</h2>
                         </div>
 
                         <br><br>
                         
+                        <!--answer choices-->
                         <div class="container">
                             <div class="row justify-content-center">
 
-                                <div class="col col-sm-12 col-md-6 col-lg-auto col-xl-auto">
-                                    <input type="radio" name="activeness">I never work out</input>
+                                <div class="col col-12 col-sm-12 col-md-6 col-lg-auto col-xl-auto">
+                                    <input type="radio" name="activeness" id="neverWorkOut">
+                                    <label for="neverWorkOut">I never work out</label>
                                 </div>
-                                <div class="col col-sm-12 col-md-6 col-lg-auto col-xl-auto">
-                                    <input type="radio" name="activeness">It's been a while</input>
+                                <div class="col col-12 col-sm-12 col-md-6 col-lg-auto col-xl-auto">
+                                    <input type="radio" name="activeness" id="aWhile">
+                                    <label for="aWhile">It's been a while</label>
                                 </div>
-                                <div class="col col-sm-12 col-md-6 col-lg-auto col-xl-auto">
-                                    <input type="radio" name="activeness">A few times a week</input>
+                                <div class="col col-12 col-sm-12 col-md-6 col-lg-auto col-xl-auto">
+                                    <input type="radio" name="activeness" id="fewTimes">
+                                    <label for="fewTimes">A few times a week</label>
                                 </div>
-                                <div class="col col-sm-12 col-md-6 col-lg-auto col-xl-auto">
-                                    <input type="radio" name="activeness">Fitness is part of my daily life</input>
+                                <div class="col col-12 col-sm-12 col-md-6 col-lg-auto col-xl-auto">
+                                    <input type="radio" name="activeness" id="partOfDay">
+                                    <label for="partOfDay">Fitness is part of my daily life</label>
                                 </div>
 
                             </div>
@@ -58,12 +65,13 @@
 
                         <br><br>
 
+                        <!--buttons to switch pages-->
                         <div class="d-flex flex-row justify-content-center">
                             <div>
-                                <a href="q1.html" class="btn quiz-button">Previous</a>
+                                <a href="q1.html" class="btn quiz-button" role="button">Previous</a>
                             </div>
                             <div>
-                                <a href="q3.html" class="btn quiz-button">Next</a>
+                                <a href="q3.html" class="btn quiz-button" role="button">Next</a>
                             </div>
                         </div>
                         

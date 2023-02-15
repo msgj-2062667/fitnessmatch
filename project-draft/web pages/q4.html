@@ -26,42 +26,50 @@
             <div id="body-content">
                 <form>
                     <div>
-                        <div class="d-flex justify-content-center">
+                        <!--progress bar-->
+                        <div class="d-flex justify-content-center" aria-label="progress bar of questions completed">
                             <progress id="file" value="42.86" max="100" class="quiz-progress"> 42.86% </progress> 
                             <label for="file">3 out of 7 completed</label>
                         </div>
 
+                        <!--question-->
                         <div class="d-flex justify-content-center">
                             <h2 class="quiz-question">How often do you want to train?</h2>
                         </div>
 
                         <br><br>
 
+                        <!--answer choices-->
                         <div class="container">
                             <div class="row justify-content-center">
-                                <div class="col col-sm-12 col-md-6 col-lg-auto col-xl-auto">
-                                    <input type="radio" name="training-frequency">Daily</input>
+                                <div class="col col-12 col-sm-12 col-md-6 col-lg-auto col-xl-auto">
+                                    <input type="radio" name="training-frequency" id="daily">
+                                    <label for="daily">Daily</label>
                                 </div>
-                                <div class="col col-sm-12 col-md-6 col-lg-auto col-xl-auto">
-                                    <input type="radio" name="training-frequency">A few times a week</input>
+                                <div class="col col-12 col-sm-12 col-md-6 col-lg-auto col-xl-auto">
+                                    <input type="radio" name="training-frequency" id="fewTimesWeek">
+                                    <label for="fewTimesWeek">A few times a week</label>
                                 </div>
-                                <div class="col col-sm-12 col-md-6 col-lg-auto col-xl-auto">
-                                    <input type="radio" name="training-frequency">Once a week</input>
+                                <div class="col col-12 col-sm-12 col-md-6 col-lg-auto col-xl-auto">
+                                    <input type="radio" name="training-frequency" id="onceWeek">
+                                    <label for="onceWeek">Once a week</label>
                                 </div>
-                                <div class="col col-sm-12 col-md-6 col-lg-auto col-xl-auto">
-                                    <input type="radio" name="training-frequency">A few times a month</input>
+                                <div class="col col-12 col-sm-12 col-md-6 col-lg-auto col-xl-auto">
+                                    <input type="radio" name="training-frequency" id="fewTimesMonth">
+                                    <label for="fewTimesMonth">A few times a month</label>
                                 </div>
                             </div>
                         </div>
                     
                         <br><br>
 
+                        <!--buttons to switch pages-->
                         <div class="d-flex flex-row justify-content-center">
                             <div>
-                                <a href="q3.html" class="btn quiz-button">Previous</a>
+                                <a href="q3.html" class="btn quiz-button" role="button">Previous</a>
                             </div>
                             <div>
-                                <a href="q5.html" class="btn quiz-button">Next</a>
+                                <a href="q5.html" class="btn quiz-button" role="button">Next</a>
                             </div>
                         </div>
                         

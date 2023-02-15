@@ -26,11 +26,13 @@
             <div id="body-content">
                 <form>
                     <div>
-                        <div class="d-flex justify-content-center">
+                        <!--progress bar-->
+                        <div class="d-flex justify-content-center" aria-label="progress bar of questions completed">
                             <progress id="file" value="28.57" max="100" class="quiz-progress"> 28.57% </progress> 
                             <label for="file">2 out of 7 completed</label>
                         </div>
                         
+                        <!--question-->
                         <div class="d-flex justify-content-center">
                             <h2 class="quiz-question">When do you want to train?
                                 <small>(Check all that apply)</small>
@@ -39,33 +41,41 @@
 
                         <br><br>
                         
+                        <!--answer choices-->
                         <div class="d-flex justify-content-center">
-                            <label><h3 class="sub-question">Days</h3></label>
+                            <h3 class="sub-question">Days</h3>
                         </div>
 
                         <div class="container">
                             <div class="row justify-content-center">
 
-                                <div class="col col-sm-12 col-md-auto col-lg-auto col-xl-auto">
-                                    <input type="checkbox">Monday</input>
+                                <div class="col col-12 col-sm-12 col-md-auto col-lg-auto col-xl-auto">
+                                    <input type="checkbox" id="monday">
+                                    <label for="monday">Monday</label>
                                 </div>
-                                <div class="col col-sm-12 col-md-auto col-lg-auto col-xl-auto">
-                                    <input type="checkbox">Tuesday</input>
+                                <div class="col col-12 col-sm-12 col-md-auto col-lg-auto col-xl-auto">
+                                    <input type="checkbox" id="tuesday">
+                                    <label for="tuesday">Tuesday</label>
                                 </div>
-                                <div class="col col-sm-12 col-md-auto col-lg-auto col-xl-auto">
-                                    <input type="checkbox">Wednesday</input>
+                                <div class="col col-12 col-sm-12 col-md-auto col-lg-auto col-xl-auto">
+                                    <input type="checkbox" id="wednesday">
+                                    <label for="wednesday">Wednesday</label>
                                 </div>
-                                <div class="col col-sm-12 col-md-auto col-lg-auto col-xl-auto">
-                                    <input type="checkbox">Thursday</input>
+                                <div class="col col-12 col-sm-12 col-md-auto col-lg-auto col-xl-auto">
+                                    <input type="checkbox" id="thursday">
+                                    <label for="thursday">Thursday</label>
                                 </div>
-                                <div class="col col-sm-12 col-md-auto col-lg-auto col-xl-auto">
-                                    <input type="checkbox">Friday</input>
+                                <div class="col col-12 col-sm-12 col-md-auto col-lg-auto col-xl-auto">
+                                    <input type="checkbox" id="friday">
+                                    <label for="friday">Friday</label>
                                 </div>
-                                <div class="col col-sm-12 col-md-auto col-lg-auto col-xl-auto">
-                                    <input type="checkbox">Saturday</input>
+                                <div class="col col-12 col-sm-12 col-md-auto col-lg-auto col-xl-auto">
+                                    <input type="checkbox" id="saturday">
+                                    <label for="saturday">Saturday</label>
                                 </div>
-                                <div class="col col-sm-12 col-md-auto col-lg-auto col-xl-auto">
-                                    <input type="checkbox">Sunday</input>
+                                <div class="col col-12 col-sm-12 col-md-auto col-lg-auto col-xl-auto">
+                                    <input type="checkbox" id="sunday">
+                                    <label for="sunday">Sunday</label>
                                 </div>
 
                             </div>
@@ -74,33 +84,35 @@
                         <br>
 
                         <div class="d-flex justify-content-center">
-                            <label><h3 class="sub-question">Time of day</h3></label>
+                            <h3 class="sub-question">Time of day</h3>
                         </div>
 
                         <div class="container">
                             <div class="row justify-content-center">
 
-                                <div class="col col-sm-12 col-md-auto col-lg-auto col-xl-auto">
-                                    <input type="checkbox">Morning</input>
+                                <div class="col col-12 col-sm-12 col-md-auto col-lg-auto col-xl-auto">
+                                    <input type="checkbox" id="morning">
+                                    <label for="morning">Morning</label>
                                 </div>
-                                <div class="col col-sm-12 col-md-auto col-lg-auto col-xl-auto">
-                                    <input type="checkbox">Afternoon</input>
+                                <div class="col col-12 col-sm-12 col-md-auto col-lg-auto col-xl-auto">
+                                    <input type="checkbox" id="afternoon">
+                                    <label for="afternoon">Afternoon</label>
                                 </div>
-                                <div class="col col-sm-12 col-md-auto col-lg-auto col-xl-auto">
-                                    <input type="checkbox">Evening</input>
+                                <div class="col col-12 col-sm-12 col-md-auto col-lg-auto col-xl-auto">
+                                    <input type="checkbox" id="evening">
+                                    <label for="evening">Evening</label>
                                 </div>
 
                             </div>
                         </div>
 
-                        <br><br>
-
+                        <!--buttons to switch pages-->
                         <div class="d-flex flex-row justify-content-center">
                             <div>
-                                <a href="q2.html" class="btn quiz-button">Previous</a>
+                                <a href="q2.html" class="btn quiz-button" role="button">Previous</a>
                             </div>
                             <div>
-                                <a href="q4.html" class="btn quiz-button">Next</a>
+                                <a href="q4.html" class="btn quiz-button" role="button">Next</a>
                             </div>
                         </div>
                         

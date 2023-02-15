@@ -181,6 +181,7 @@ div.edit {
     margin-bottom: 2rem;
 }
 
+/*display of buttons on quiz page*/
 a.quiz-button {
     background-color: #ade792;
     padding: 0.5rem;
@@ -188,6 +189,7 @@ a.quiz-button {
     text-decoration: none
 }
 
+/*display of quiz progress bar*/
 progress.quiz-progress {
     width: 15rem;
     height: 1rem;
@@ -196,11 +198,13 @@ progress.quiz-progress {
     background-color: #ececec;
 }
 
+/*padding for h3 quiz questions*/
 h3.quiz-sub-question {
     font-size: 1.5rem;
     padding: 1rem;
 }
 
+/*padding for h2 quiz questions*/
 h2.quiz-question {
     padding: 0.5rem;
 }
