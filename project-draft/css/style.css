@@ -7,7 +7,9 @@ html, body {
     padding: 0;
     height: 100%;
 }
-
+.container-fluid{
+    padding: 0px !important;
+}
 h1 {
     color: black;
     padding: 10px;
@@ -62,7 +64,7 @@ div.wrapper{
     height: 100vh;
     -webkit-background-size: cover;
     background-size: cover;
-    background-position: center;
+    background-position-x: center;
     position: relative;
 }
 
@@ -93,19 +95,23 @@ a.btn-green, .btn.btn-green {
 a.btn-large {
     background-color: #ade792;
     color: black;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 main.index {
     margin-top: 80px;
     text-align: center;
-    height: 100vh;
+    /* height: 100vh; */
     line-height: 100px;
+}
+.welcome-text{
+    font-size: 80px !important;
 }
 
 main.index p {
     color: #ade792;
     font-size: 50px;
+    font-weight: bolder;
     text-shadow: 0 0 20px rgba(250, 250, 250, 0.685);
 }
 
@@ -210,7 +216,7 @@ h2.quiz-question {
 }
 
 div.container {
-    display: flex;
+    display: flex; 
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
@@ -218,7 +224,7 @@ div.container {
 }
 
 #body-wrapper {
-    min-height: 100%;
+    min-height: 100vh;
     position: relative;
 }
 
@@ -226,6 +232,39 @@ div.container {
     padding-bottom: max-content;
 }
 
+.body-content-container{
+    display: block !important;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.6);;
+    padding: 30px 30px;
+}
+
+.row-content-cont{
+    /* border: 2px solid blue; */
+    color: white;
+    position: relative;
+
+}
+.heading-color{
+    color: #ADE792;
+    font-weight: bold;
+}
+.trainer-img-div{
+    /* border: 1px solid green; */
+    width: 400px;
+}
+#trainerImg{
+    width: 100%;
+    }
+.trainer-profile-container{
+    position: relative;
+}
+.schedule-btn{
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    justify-content: flex-end;
+}
 footer {
     color: white;
     width: 100%;
@@ -249,17 +288,54 @@ footer.footerr {
     bottom: 0;
     left: 0;
 }
+.trainer-profile-footer{
+    position: relative;
+}
+.footer-item{
+    padding-top: 20px;
+}
 
 p a, li a {
     text-decoration: none;
     color: white;
+    position: relative;
+}
+/* //////////////////////////// */
+p a span{
+    position: absolute;    
+    left: -30px;
+    top: -6px;
 }
 
 footer ul li, footer.footerr ul li {
-    display: inline-block;
+    /* display: inline-block; */
+    /* border: 1px solid red; */
     list-style: none;
     margin: 0.8px;
     line-height: 50px;
+}
+.footer-ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.footer-item-div{
+    /* border: 1px solid white; */
+    width: 150px;
+    margin: 0px 10px;
+
+}
+.footer-contact-li{
+    margin-top: -10px !important;
+}
+.footer-item-div span{
+    position: absolute;
+    top: -5px;
+    left: -29px;
+}
+
+.footer-copyright{
+    margin-bottom: 0px;
 }
 
 div.trainer-scheduling-bg, div.trainer-matches-bg {
@@ -303,8 +379,88 @@ a.btn.timeslot-button:active, a.btn.timeslot-button:hover, a.btn.timeslot-button
     border-color: #0c4b2b;
     border-width: medium;
 }
+/* less than 576px */
+@media (max-width: 575.98px) { 
+    /* nav (intro) */
+    nav{
+        height: 100px;
+    }
+    img.logo {
+        width: 150px !important;
+        margin-left: 0px !important;
+    }
+    div.buttons{
+        margin-right: 0px !important;
+    }
+    a.btn:link, a.btn:visited {
+        padding: 4px 8px !important;
+    }
+    a.btn-green, .btn.btn-green {
+        font-size: 8px !important;
+    }
+    /* index start */
+    .welcome-text{
+        font-size: 60px !important;
+    }
+    a.btn-large {
+        font-size: 25px !important;
+    }
+    main.index p {
+        font-size: 35px;
+    }
 
+ }
 @media (max-width: 768px) {
+    /* nav (intro) */
+    img.logo {
+        width: 180px;
+        margin-left: 10px;
+    }
+    
+    div.buttons {
+        margin-right: 10px;
+    }
+    a.btn:link, a.btn:visited {
+        padding: 8px 16px;
+    
+    }
+    a.btn-green, .btn.btn-green {
+        font-size: 10px;
+    }
+    /* index start */
+    a.btn-large {
+        font-size: 25px;
+        margin-bottom: 40px;
+    }
+    a.btn-large:link , a.btn-large:visited{
+        padding: 8px 16px !important;
+    }
+    /* trainer profile */
+    .trainer-img-div{
+        max-width: 320px !important;
+        padding: 0px !important;
+    }
+    .schedule-btn{
+        position: relative;
+    }
+    main.index {
+        line-height: 80px;
+    }
+    .welcome-text{
+        font-size: 65px !important;
+    }
+    main.index p {
+        font-size: 45px;
+    }
+    /* index end */
+    div.button {
+        float: right;
+        padding: 20px;
+        margin-right: 100px;
+        position: relative;
+        bottom: 70px;
+    }
+
     div.card-column-container {
         flex: auto;
     }
@@ -315,18 +471,23 @@ a.btn.timeslot-button:active, a.btn.timeslot-button:hover, a.btn.timeslot-button
         background-image: none;
     }
     .no-disp {
-        display: none;
+        /* display: none; */
+        margin-right: 0px !important;
+    }
+    .button-bot{
+        font-size: 30px !important;
+        margin-right: 10px !important;
     }
     .extra-padding {
-        padding-bottom: 0.5rem;
+        padding-bottom: 1rem;
     }
     .schedule-padding {
         padding-bottom: 3rem;
     }
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     .button-bot {
         display: none;
-    }
-}
+    } 
+} */
