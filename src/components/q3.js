@@ -1,10 +1,30 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+import '../../src/style.css';
+import 'bootstrap/dis/css/bootstrap.css';
 
 export function QuestionThree(props) {
+    const [selections, setSelections] = useState([]);
+
+    const handleInputChange = function(event) {
+        const {id} = event.target;
+        const newSelections = selections.includes(id) ? selections.filter((input) => input !== id) : [...selections, id];
+        setSelections(newSelections);
+    }
+
+    const navigate = useNavigate();
+
+    const handleSubmit = function(event) {
+        event.preventDefault();
+        // form submission work
+
+        navigate("/q4");
+    }
+
     return (
         <body>
             <header>
-                <a href="../index.html"><img className="logo" src="../img/logo.jpg" alt="Logo"/></a>
+                <Link to="./homeQuiz"><img className="logo" src="../img/logo.jpg" alt="Logo"/></Link>
             </header>
 
             <h1>Preference Quiz</h1>
@@ -13,7 +33,7 @@ export function QuestionThree(props) {
 
                 <main>
                     <div id="body-content">
-                        <form>
+                        <form onSubmit={handleSubmit}>
                             <div>
                                 {/* progress ba */}
                                 <div className="d-flex justify-content-center" aria-label="progress bar of questions completed">
@@ -80,15 +100,15 @@ export function QuestionThree(props) {
                                     <div className="row justify-content-center">
 
                                         <div className="col col-12 col-sm-12 col-md-auto col-lg-auto col-xl-auto">
-                                            <input type="checkbox" id="morning"/>
+                                            <input type="checkbox" id="morning" onChange={handleInputChange}/>
                                             <label for="morning">Morning</label>
                                         </div>
                                         <div className="col col-12 col-sm-12 col-md-auto col-lg-auto col-xl-auto">
-                                            <input type="checkbox" id="afternoon"/>
+                                            <input type="checkbox" id="afternoon" onChange={handleInputChange}/>
                                             <label for="afternoon">Afternoon</label>
                                         </div>
                                         <div className="col col-12 col-sm-12 col-md-auto col-lg-auto col-xl-auto">
-                                            <input type="checkbox" id="evening"/>
+                                            <input type="checkbox" id="evening" onChange={handleInputChange}/>
                                             <label for="evening">Evening</label>
                                         </div>
 
@@ -98,10 +118,10 @@ export function QuestionThree(props) {
                                 {/* buttons to switch pages */}
                                 <div className="d-flex flex-row justify-content-center">
                                     <div>
-                                        <a href="q2.html" className="btn quiz-button" role="button">Previous</a>
+                                        <Link to="/q2" className="btn quiz-button" role="button">Previous</Link>
                                     </div>
                                     <div>
-                                        <a href="q4.html" className="btn quiz-button" role="button">Next</a>
+                                        <button type="submit" className="btn quiz-button" role="button">Next</button>
                                     </div>
                                 </div>
 

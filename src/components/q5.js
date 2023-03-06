@@ -1,10 +1,30 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+import '../../src/style.css';
+import 'bootstrap/dis/css/bootstrap.css';
 
 export function QuestionFive(props) {
+    const [selections, setSelections] = useState([]);
+
+    const handleInputChange = function(event) {
+        const {id} = event.target;
+        const newSelections = selections.includes(id) ? selections.filter((input) => input !== id) : [...selections, id];
+        setSelections(newSelections);
+    }
+
+    const navigate = useNavigate();
+
+    const handleSubmit = function(event) {
+        event.preventDefault();
+        // form submission work
+
+        navigate("/q6");
+    }
+
     return (
         <body>
             <header>
-                <a href="../index.html"><img className="logo" src="../img/logo.jpg" alt="Logo"/></a>
+                <Link to="./homeQuiz"><img className="logo" src="../img/logo.jpg" alt="Logo"/></Link>
             </header>
 
             <h1>Preference Quiz</h1>
@@ -13,7 +33,7 @@ export function QuestionFive(props) {
 
                 <main>
                     <div id="body-content">
-                        <form>
+                        <form onSubmit={handleSubmit}>
                             <div>
                                 {/* progress bar */}
                                 <div className="d-flex justify-content-center" aria-label="progress bar of questions completed">
@@ -35,15 +55,15 @@ export function QuestionFive(props) {
                                     <div className="row justify-content-center">
 
                                         <div className="col col-12 col-sm-12 col-md-auto col-lg-auto col-xl-auto">
-                                            <input type="checkbox" id="drill"/>
+                                            <input type="checkbox" id="drill" onChange={handleInputChange}/>
                                             <label for="drill">Drill sergeant</label>
                                         </div>
                                         <div className="col col-12 col-sm-12 col-md-auto col-lg-auto col-xl-auto">
-                                            <input type="checkbox" id="supportive"/>
+                                            <input type="checkbox" id="supportive" onChange={handleInputChange}/>
                                             <label for="supportive">Supportive, nurturing coach</label>
                                         </div>
                                         <div className="col col-12 col-sm-12 col-md-auto col-lg-auto col-xl-auto">
-                                            <input type="checkbox" id="educator"/>
+                                            <input type="checkbox" id="educator" onChange={handleInputChange}/>
                                             <label for="educator">Educator/teacher</label>
                                         </div>
 
@@ -55,10 +75,10 @@ export function QuestionFive(props) {
                                 {/* buttons to switch pages */}
                                 <div className="d-flex flex-row justify-content-center">
                                     <div>
-                                        <a href="q4.html" className="btn quiz-button" role="button">Previous</a>
+                                        <Link to="/q4" className="btn quiz-button" role="button">Previous</Link>
                                     </div>
                                     <div>
-                                        <a href="q6.html" className="btn quiz-button" role="button">Next</a>
+                                        <button type="submit" className="btn quiz-button" role="button">Next</button>
                                     </div>
                                 </div>
 

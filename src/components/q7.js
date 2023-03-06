@@ -1,10 +1,30 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+import '../../src/style.css';
+import 'bootstrap/dis/css/bootstrap.css';
 
 export function QuestionSeven(props) {
+    const [selections, setSelections] = useState([]);
+
+    const handleInputChange = function(event) {
+        const {id} = event.target;
+        const newSelections = selections.includes(id) ? selections.filter((input) => input !== id) : [...selections, id];
+        setSelections(newSelections);
+    }
+
+    const navigate = useNavigate();
+
+    const handleSubmit = function(event) {
+        event.preventDefault();
+        // form submission work
+
+        navigate("/qResults");
+    }
+
     return (
         <body>
             <header>
-                <a href="../index.html"><img className="logo" src="../img/logo.jpg" alt="Logo"/></a>
+                <Link to="./homeQuiz"><img className="logo" src="../img/logo.jpg" alt="Logo"/></Link>
             </header>
 
             <h1>Preference Quiz</h1>
@@ -13,7 +33,7 @@ export function QuestionSeven(props) {
 
                 <main>
                     <div id="body-content">
-                        <form>
+                        <form onSubmit={handleSubmit}>
                             <div>
                                 {/* progress bar */}
                                 <div className="d-flex justify-content-center" aria-label="progress bar of questions completed">
@@ -34,51 +54,51 @@ export function QuestionSeven(props) {
                                 <div className="container">
                                     <div className="row justify-content-center">
                                         <div className="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                                            <input type="checkbox" id="cardio"/>
+                                            <input type="checkbox" id="cardio" onChange={handleInputChange}/>
                                             <label for="cardio">Cardio</label>
                                         </div>
                                         <div className="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                                            <input type="checkbox" id="machines"/>
+                                            <input type="checkbox" id="machines" onChange={handleInputChange}/>
                                             <label for="machines">Machines</label>
                                         </div>
                                         <div className="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                                            <input type="checkbox" id="swimming"/>
+                                            <input type="checkbox" id="swimming" onChange={handleInputChange}/>
                                             <label for="swimming">Swimming</label>
                                         </div>
                                         <div className="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                                            <input type="checkbox" id="triathlon"/>
+                                            <input type="checkbox" id="triathlon" onChange={handleInputChange}/>
                                             <label for="triathlon">Triathlon Training</label>
                                         </div>
                                         <div className="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                                            <input type="checkbox" id="lifting"/>
+                                            <input type="checkbox" id="lifting" onChange={handleInputChange}/>
                                             <label for="lifting">Lifting</label>
                                         </div>
                                         <div className="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                                            <input type="checkbox" id="cycling"/>
+                                            <input type="checkbox" id="cycling" onChange={handleInputChange}/>
                                             <label for="cycling">Cycling</label>
                                         </div>
                                         <div className="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                                            <input type="checkbox" id="kickboxing"/>
+                                            <input type="checkbox" id="kickboxing" onChange={handleInputChange}/>
                                             <label for="kickboxing">Kickboxing</label>
                                         </div>
                                         <div className="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                                            <input type="checkbox" id="yoga"/>
+                                            <input type="checkbox" id="yoga" onChange={handleInputChange}/>
                                             <label for="yoga">Yoga</label>
                                         </div>
                                         <div className="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                                            <input type="checkbox" id="zumba"/>
+                                            <input type="checkbox" id="zumba" onChange={handleInputChange}/>
                                             <label for="zumba">Zumba</label>
                                         </div>
                                         <div className="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                                            <input type="checkbox" id="pilates"/>
+                                            <input type="checkbox" id="pilates" onChange={handleInputChange}/>
                                             <label for="pilates">Pilates</label>
                                         </div>
                                         <div className="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                                            <input type="checkbox" id="hiit"/>
+                                            <input type="checkbox" id="hiit" onChange={handleInputChange}/>
                                             <label for="hiit">HIIT</label>
                                         </div>
                                         <div className="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                                            <input type="checkbox" id="crossFit"/>
+                                            <input type="checkbox" id="crossFit" onChange={handleInputChange}/>
                                             <label for="crossFit">CrossFit</label>
                                         </div>
                                     </div>
@@ -89,10 +109,10 @@ export function QuestionSeven(props) {
                                 {/* buttons to switch pages */}
                                 <div className="d-flex flex-row justify-content-center">
                                     <div>
-                                        <a href="q6.html" className="btn quiz-button" role="button">Previous</a>
+                                        <Link to="/q6" className="btn quiz-button" role="button">Previous</Link>
                                     </div>
                                     <div>
-                                        <a href="qResults.html" className="btn quiz-button" role="button">Submit</a>
+                                        <button type="submit" className="btn quiz-button" role="button">Submit</button>
                                     </div>
                                 </div>
 

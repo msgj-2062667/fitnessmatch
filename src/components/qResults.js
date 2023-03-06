@@ -1,10 +1,13 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+import '../../src/style.css';
+import 'bootstrap/dis/css/bootstrap.css';
 
 export function QuizResults(props) {
     return (
         <body>
             <header>
-                <a href="../index.html"><img className="logo" src="../img/logo.jpg" alt="Logo"/></a>
+                <Link to="/homeQuiz"><img className="logo" src="../img/logo.jpg" alt="Logo"/></Link>
             </header>
 
             <h1>Preference Quiz</h1>
@@ -32,9 +35,9 @@ export function QuizResults(props) {
                                 {/* buttons to switch pages */}
                                 <div className="d-flex flex-row justify-content-center">
                                     <div>
-                                        <a href="q7.html" className="btn quiz-button" role="button">Back to quiz</a>
+                                        <Link to="/QuestionSeven" className="btn quiz-button" role="button">Back to quiz</Link>
                                     </div>
-                                    <a href="../web pages/trainermatches.html" className="btn quiz-button" role="button">View</a>
+                                    <Link to="/trainerMatches" className="btn quiz-button" role="button">View</Link>
                                 </div>
 
                             </div>

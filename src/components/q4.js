@@ -1,10 +1,30 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+import '../../src/style.css';
+import 'bootstrap/dis/css/bootstrap.css';
 
 export function QuestionFour(props) {
+    const [selections, setSelections] = useState([]);
+
+    const handleInputChange = function(event) {
+        const {id} = event.target;
+        const newSelections = selections.includes(id) ? selections.filter((input) => input !== id) : [...selections, id];
+        setSelections(newSelections);
+    }
+
+    const navigate = useNavigate();
+
+    const handleSubmit = function(event) {
+        event.preventDefault();
+        // form submission work
+
+        navigate("/q5");
+    }
+
     return (
         <body>
             <header>
-                <a href="../index.html"><img className="logo" src="../img/logo.jpg" alt="Logo"/></a>
+                <Link to="./homeQuiz"><img className="logo" src="../img/logo.jpg" alt="Logo"/></Link>
             </header>
 
             <h1>Preference Quiz</h1>
@@ -13,7 +33,7 @@ export function QuestionFour(props) {
 
                 <main>
                     <div id="body-content">
-                        <form>
+                        <form onSubmit={handleSubmit}>
                             <div>
                                 {/* progress bar */}
                                 <div className="d-flex justify-content-center" aria-label="progress bar of questions completed">
@@ -32,19 +52,19 @@ export function QuestionFour(props) {
                                 <div className="container">
                                     <div className="row justify-content-center">
                                         <div className="col col-12 col-sm-12 col-md-6 col-lg-auto col-xl-auto">
-                                            <input type="radio" name="training-frequency" id="daily"/>
+                                            <input type="radio" name="training-frequency" id="daily" onChange={handleInputChange}/>
                                             <label for="daily">Daily</label>
                                         </div>
                                         <div className="col col-12 col-sm-12 col-md-6 col-lg-auto col-xl-auto">
-                                            <input type="radio" name="training-frequency" id="fewTimesWeek"/>
+                                            <input type="radio" name="training-frequency" id="fewTimesWeek" onChange={handleInputChange}/>
                                             <label for="fewTimesWeek">A few times a week</label>
                                         </div>
                                         <div className="col col-12 col-sm-12 col-md-6 col-lg-auto col-xl-auto">
-                                            <input type="radio" name="training-frequency" id="onceWeek"/>
+                                            <input type="radio" name="training-frequency" id="onceWeek" onChange={handleInputChange}/>
                                             <label for="onceWeek">Once a week</label>
                                         </div>
                                         <div className="col col-12 col-sm-12 col-md-6 col-lg-auto col-xl-auto">
-                                            <input type="radio" name="training-frequency" id="fewTimesMonth"/>
+                                            <input type="radio" name="training-frequency" id="fewTimesMonth" onChange={handleInputChange}/>
                                             <label for="fewTimesMonth">A few times a month</label>
                                         </div>
                                     </div>
@@ -55,10 +75,10 @@ export function QuestionFour(props) {
                                 {/* buttons to switch pages */}
                                 <div className="d-flex flex-row justify-content-center">
                                     <div>
-                                        <a href="q3.html" className="btn quiz-button" role="button">Previous</a>
+                                        <Link to="/q3" className="btn quiz-button" role="button">Previous</Link>
                                     </div>
                                     <div>
-                                        <a href="q5.html" className="btn quiz-button" role="button">Next</a>
+                                        <button type="submit" className="btn quiz-button" role="button">Next</button>
                                     </div>
                                 </div>
 

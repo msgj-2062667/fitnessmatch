@@ -339,7 +339,7 @@ footer ul li, footer.footerr ul li {
 }
 
 div.trainer-scheduling-bg, div.trainer-matches-bg {
-    background-image: url("../img/background.jpg");
+    background-image: url("../project-draft/img/background.jpg");
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center;
